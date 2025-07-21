@@ -22,7 +22,7 @@ This project is a **Phishing Simulator** designed to help you **learn how to ide
    - Click on the green "Code" button on GitHub.
    - Select "Download ZIP" or use the following Git command to clone:
      ```bash
-     git clone https://github.com/your-username/phishing-simulator.git
+     git clone https://github.com/BadshaHac/phishing-simulator/
      ```
 
 2. **Open the Files**:
