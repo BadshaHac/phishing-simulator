@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training - Educational Simulation</title>
+    <link rel="stylesheet" href="phishing-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Educational Warning Banner -->
+    <div class="warning-banner">
+        <div class="warning-content">
+            <svg class="warning-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <div>
+                <strong>EDUCATIONAL SIMULATION</strong>
+                <p>This is a training tool to help identify phishing attempts. All examples are simulated for educational purposes only.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>Phishing Awareness Training</h1>
+            <p class="subtitle">Learn to identify and protect yourself from phishing attacks</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="nav-btn active" data-section="overview">Overview</button>
+            <button class="nav-btn" data-section="email-examples">Email Examples</button>
+            <button class="nav-btn" data-section="fake-websites">Fake Websites</button>
+            <button class="nav-btn" data-section="red-flags">Red Flags</button>
+            <button class="nav-btn" data-section="quiz">Test Yourself</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="content-section active">
+            <div class="container">
+                <h2>What is Phishing?</h2>
+                <div class="info-card">
+                    <p>Phishing is a cybercrime where attackers impersonate legitimate organizations to steal sensitive information such as usernames, passwords, and credit card details.</p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>3.4 Billion</h3>
+                            <p>Phishing emails sent daily</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>75%</h3>
+                            <p>Organizations experienced phishing attacks</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>$17,700</h3>
+                            <p>Average cost per minute of phishing attack</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Common Phishing Techniques</h3>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <div class="technique-icon">📧</div>
+                        <h4>Email Phishing</h4>
+                        <p>Fraudulent emails that appear to be from trusted sources</p>
+                    </div>
+                    <div class="technique-card">
+                        <div class="technique-icon">🔗</div>
+                        <h4>Spear Phishing</h4>
+                        <p>Targeted attacks on specific individuals or organizations</p>
+                    </div>
+                    <div class="technique-card">
+                        <div class="technique-icon">🐋</div>
+                        <h4>Whaling</h4>
+                        <p>Attacks targeting high-profile executives</p>
+                    </div>
+                    <div class="technique-card">
+                        <div class="technique-icon">📱</div>
+                        <h4>Smishing</h4>
+                        <p>Phishing via SMS text messages</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Examples Section -->
+        <section id="email-examples" class="content-section">
+            <div class="container">
+                <h2>Phishing Email Examples</h2>
+                <p class="section-intro">Click on each email to see the red flags and learn how to identify phishing attempts.</p>
+
+                <!-- Email Template 1: Account Suspension -->
+                <div class="email-example">
+                    <div class="email-header">
+                        <div class="email-from">
+                            <strong>From:</strong> <span class="suspicious">support@gma1l-security.com</span>
+                            <span class="red-flag-indicator" title="Suspicious domain">⚠️</span>
+                        </div>
+                        <div class="email-subject">
+                            <strong>Subject:</strong> Your Account Has Been Suspended – Immediate Action Required!
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>Dear User,</p>
+                        <p>We've noticed <span class="highlight-suspicious">unusual activity</span> on your account, and as a precautionary measure, we've <span class="highlight-suspicious">temporarily suspended access</span>.</p>
+                        <p>To restore your account, click the link below to verify your identity:</p>
+                        <a href="#" class="phishing-link" onclick="showPhishingWarning(event)">www.gma1l-verify.com/restore-account</a>
+                        <p class="urgent-text">Failure to complete this action within 24 hours will result in permanent suspension.</p>
+                        <p>Thank you for your prompt attention to this matter.</p>
+                    </div>
+                    <div class="red-flags-panel">
+                        <h4>🚨 Red Flags in This Email:</h4>
+                        <ul>
+                            <li><strong>Fake domain:</strong> "gma1l-security.com" uses number "1" instead of letter "i"</li>
+                            <li><strong>Generic greeting:</strong> "Dear User" instead of your actual name</li>
+                            <li><strong>Urgency tactics:</strong> "24 hours" deadline to create panic</li>
+                            <li><strong>Suspicious link:</strong> Hover to see it doesn't go to official Gmail</li>
+                            <li><strong>Grammar issues:</strong> Professional companies proofread their emails</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Email Template 2: Prize Notification -->
+                <div class="email-example">
+                    <div class="email-header">
+                        <div class="email-from">
+                            <strong>From:</strong> <span class="suspicious">prizes@amaz0n-rewards.net</span>
+                            <span class="red-flag-indicator" title="Fake domain">⚠️</span>
+                        </div>
+                        <div class="email-subject">
+                            <strong>Subject:</strong> Congratulations! You've Won a $500 Gift Card!
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>Hi Lucky Winner,</p>
+                        <p>You've been selected as the <span class="highlight-suspicious">lucky winner</span> of a $500 gift card!</p>
+                        <p>To claim your prize, please verify your email address by clicking the link below:</p>
+                        <a href="#" class="phishing-link" onclick="showPhishingWarning(event)">claim-prize.amaz0n-rewards.net/winner</a>
+                        <p class="urgent-text">Hurry, this offer expires soon!</p>
+                        <p>Warm Regards,<br>The Amazon Prize Team</p>
+                    </div>
+                    <div class="red-flags-panel">
+                        <h4>🚨 Red Flags in This Email:</h4>
+                        <ul>
+                            <li><strong>Too good to be true:</strong> Unexpected prizes are usually scams</li>
+                            <li><strong>Fake domain:</strong> "amaz0n" uses zero instead of letter "o"</li>
+                            <li><strong>No specific details:</strong> Doesn't mention any contest you entered</li>
+                            <li><strong>Urgency:</strong> "Hurry" and "expires soon" to rush your decision</li>
+                            <li><strong>Generic greeting:</strong> Legitimate winners are addressed by name</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Email Template 3: Security Alert -->
+                <div class="email-example">
+                    <div class="email-header">
+                        <div class="email-from">
+                            <strong>From:</strong> <span class="suspicious">security@paypaI.com</span>
+                            <span class="red-flag-indicator" title="Lookalike domain">⚠️</span>
+                        </div>
+                        <div class="email-subject">
+                            <strong>Subject:</strong> Security Alert: New Device Access Detected
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>Dear Customer,</p>
+                        <p>A new device has been detected trying to access your account from an <span class="highlight-suspicious">unfamiliar location</span>.</p>
+                        <p>Device: Unknown<br>
+                        Location: Russia<br>
+                        Time: 2:34 AM</p>
+                        <p>If this was not you, please click the link to secure your account:</p>
+                        <a href="#" class="phishing-link" onclick="showPhishingWarning(event)">secure.paypaI-verify.com/lock-account</a>
+                        <p>Sincerely,<br>PayPal Support Team</p>
+                    </div>
+                    <div class="red-flags-panel">
+                        <h4>🚨 Red Flags in This Email:</h4>
+                        <ul>
+                            <li><strong>Lookalike domain:</strong> "paypaI.com" uses capital "I" instead of lowercase "l"</li>
+                            <li><strong>Fear tactics:</strong> Mentions suspicious location to scare you</li>
+                            <li><strong>Vague details:</strong> "Unknown device" provides no real information</li>
+                            <li><strong>Suspicious timing:</strong> Legitimate alerts include accurate timestamps</li>
+                            <li><strong>Direct link:</strong> Real PayPal emails tell you to log in directly, not via links</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Email Template 4: Account Verification -->
+                <div class="email-example">
+                    <div class="email-header">
+                        <div class="email-from">
+                            <strong>From:</strong> <span class="suspicious">noreply@bankofamerica-secure.com</span>
+                            <span class="red-flag-indicator" title="Unofficial domain">⚠️</span>
+                        </div>
+                        <div class="email-subject">
+                            <strong>Subject:</strong> Account Verification Required – Update Your Information
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <p>Dear Valued Customer,</p>
+                        <p>As part of our ongoing <span class="highlight-suspicious">security efforts</span>, we require you to verify your account details to prevent unauthorized access.</p>
+                        <p>Please click the link below to confirm your information and restore full access:</p>
+                        <a href="#" class="phishing-link" onclick="showPhishingWarning(event)">bankofamerica-secure.com/verify-now</a>
+                        <p class="urgent-text">If you don't verify within 48 hours, we will have to lock your account.</p>
+                        <p>Best regards,<br>Bank of America Support Team</p>
+                    </div>
+                    <div class="red-flags-panel">
+                        <h4>🚨 Red Flags in This Email:</h4>
+                        <ul>
+                            <li><strong>Unofficial domain:</strong> Real Bank of America uses "bankofamerica.com"</li>
+                            <li><strong>Threatening language:</strong> "lock your account" creates fear</li>
+                            <li><strong>No personal info:</strong> Banks include partial account numbers</li>
+                            <li><strong>Unsolicited request:</strong> Banks don't randomly ask to verify accounts</li>
+                            <li><strong>Generic greeting:</strong> Your bank knows your name</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fake Websites Section -->
+        <section id="fake-websites" class="content-section">
+            <div class="container">
+                <h2>Fake Website Examples</h2>
+                <p class="section-intro">These are simulated phishing websites. Click to see how they try to steal your information.</p>
+
+                <!-- Fake Website Examples -->
+                <div class="website-grid">
+                    <!-- Fake Facebook Login -->
+                    <div class="fake-website-card">
+                        <h3>Fake Social Media Login</h3>
+                        <div class="website-preview" onclick="showFakeWebsite('facebook')">
+                            <div class="browser-bar">
+                                <span class="fake-url">🔒 facebo0k-login.com</span>
+                                <span class="red-flag-indicator">⚠️</span>
+                            </div>
+                            <div class="website-content facebook-fake">
+                                <div class="fake-logo">facebook</div>
+                                <form class="fake-form" onsubmit="return false;">
+                                    <input type="text" placeholder="Email or Phone">
+                                    <input type="password" placeholder="Password">
+                                    <button type="button" onclick="showPhishingWarning(event)">Log In</button>
+                                </form>
+                                <a href="#" class="fake-link">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="website-red-flags">
+                            <h4>Red Flags:</h4>
+                            <ul>
+                                <li>URL uses "0" instead of "o" in Facebook</li>
+                                <li>No official Facebook branding or footer</li>
+                                <li>Generic design lacking Facebook's polish</li>
+                                <li>Suspicious domain not owned by Meta</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fake Banking Page -->
+                    <div class="fake-website-card">
+                        <h3>Fake Banking Portal</h3>
+                        <div class="website-preview" onclick="showFakeWebsite('bank')">
+                            <div class="browser-bar">
+                                <span class="fake-url">🔒 secure-banking-portal.net</span>
+                                <span class="red-flag-indicator">⚠️</span>
+                            </div>
+                            <div class="website-content bank-fake">
+                                <div class="fake-bank-header">
+                                    <h2>Secure Banking</h2>
+                                    <p>Your trusted banking partner</p>
+                                </div>
+                                <form class="fake-form" onsubmit="return false;">
+                                    <label>Username</label>
+                                    <input type="text" placeholder="Enter username">
+                                    <label>Password</label>
+                                    <input type="password" placeholder="Enter password">
+                                    <button type="button" onclick="showPhishingWarning(event)">Sign In</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="website-red-flags">
+                            <h4>Red Flags:</h4>
+                            <ul>
+                                <li>Generic "Secure Banking" name</li>
+                                <li>No specific bank branding or logos</li>
+                                <li>Unofficial domain (.net instead of bank's .com)</li>
+                                <li>Too simple design for a real bank</li>
+                                <li>No security badges or certifications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fake Email Provider -->
+                    <div class="fake-website-card">
+                        <h3>Fake Email Login</h3>
+                        <div class="website-preview" onclick="showFakeWebsite('email')">
+                            <div class="browser-bar">
+                                <span class="fake-url">🔒 gmai1-login.com</span>
+                                <span class="red-flag-indicator">⚠️</span>
+                            </div>
+                            <div class="website-content email-fake">
+                                <div class="fake-email-logo">Gmail</div>
+                                <h3>Sign in</h3>
+                                <p>to continue to Gmail</p>
+                                <form class="fake-form" onsubmit="return false;">
+                                    <input type="email" placeholder="Email">
+                                    <button type="button" onclick="showPhishingWarning(event)">Next</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="website-red-flags">
+                            <h4>Red Flags:</h4>
+                            <ul>
+                                <li>URL uses "1" instead of "l" in Gmail</li>
+                                <li>Missing Google branding and styling</li>
+                                <li>No "One account. All of Google." tagline</li>
+                                <li>Simplified form missing Google's features</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fake Shopping Site -->
+                    <div class="fake-website-card">
+                        <h3>Fake Shopping Site</h3>
+                        <div class="website-preview" onclick="showFakeWebsite('shopping')">
+                            <div class="browser-bar">
+                                <span class="fake-url">🔒 amaz0n-deals.shop</span>
+                                <span class="red-flag-indicator">⚠️</span>
+                            </div>
+                            <div class="website-content shopping-fake">
+                                <div class="fake-shop-header">
+                                    <h2>Amazing Deals!</h2>
+                                    <p>70% OFF Everything!</p>
+                                </div>
+                                <div class="fake-product">
+                                    <div class="product-image">📱</div>
+                                    <p>Latest Smartphone</p>
+                                    <p class="fake-price">$99 <span>$999</span></p>
+                                    <button onclick="showPhishingWarning(event)">Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website-red-flags">
+                            <h4>Red Flags:</h4>
+                            <ul>
+                                <li>Deals too good to be true (70% off)</li>
+                                <li>URL uses "0" instead of "o"</li>
+                                <li>Unofficial .shop domain</li>
+                                <li>No customer reviews or ratings</li>
+                                <li>Missing legitimate payment options</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Red Flags Section -->
+        <section id="red-flags" class="content-section">
+            <div class="container">
+                <h2>How to Identify Phishing Attempts</h2>
+                
+                <div class="red-flags-guide">
+                    <div class="flag-category">
+                        <h3>🔍 Check the Sender</h3>
+                        <div class="flag-items">
+                            <div class="flag-item">
+                                <h4>Suspicious Email Addresses</h4>
+                                <p>Look for misspellings, extra characters, or unusual domains:</p>
+                                <ul>
+                                    <li>❌ support@goog1e.com (number 1 instead of l)</li>
+                                    <li>❌ noreply@amazon-security.net (unofficial domain)</li>
+                                    <li>✅ support@google.com (official domain)</li>
+                                </ul>
+                            </div>
+                            <div class="flag-item">
+                                <h4>Generic Greetings</h4>
+                                <p>Legitimate companies use your name:</p>
+                                <ul>
+                                    <li>❌ "Dear Customer"</li>
+                                    <li>❌ "Dear User"</li>
+                                    <li>✅ "Dear John Smith"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flag-category">
+                        <h3>⚠️ Warning Signs in Content</h3>
+                        <div class="flag-items">
+                            <div class="flag-item">
+                                <h4>Urgency and Threats</h4>
+                                <p>Phishing emails create panic:</p>
+                                <ul>
+                                    <li>"Act within 24 hours or lose access"</li>
+                                    <li>"Your account will be deleted"</li>
+                                    <li>"Immediate action required"</li>
+                                </ul>
+                            </div>
+                            <div class="flag-item">
+                                <h4>Too Good to Be True</h4>
+                                <p>Be skeptical of:</p>
+                                <ul>
+                                    <li>Unexpected prizes or rewards</li>
+                                    <li>Huge discounts (90% off)</li>
+                                    <li>Free money or gifts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flag-category">
+                        <h3>🔗 Suspicious Links</h3>
+                        <div class="flag-items">
+                            <div class="flag-item">
+                                <h4>Hover Before Clicking</h4>
+                                <p>Always check where links actually go:</p>
+                                <div class="link-demo">
+                                    <p>Displayed: <a href="#" class="demo-link" onmouseover="showLinkPreview(this)" onmouseout="hideLinkPreview()">Click here to verify account</a></p>
+                                    <p class="actual-link" id="link-preview" style="display:none;">Actual: http://malicious-site.com/steal-info</p>
+                                </div>
+                            </div>
+                            <div class="flag-item">
+                                <h4>URL Red Flags</h4>
+                                <ul>
+                                    <li>Misspelled domains (amazom.com)</li>
+                                    <li>Extra subdomains (paypal.fake-site.com)</li>
+                                    <li>URL shorteners hiding destination</li>
+                                    <li>HTTP instead of HTTPS on login pages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flag-category">
+                        <h3>📝 Poor Quality</h3>
+                        <div class="flag-items">
+                            <div class="flag-item">
+                                <h4>Grammar and Spelling</h4>
+                                <p>Professional companies proofread:</p>
+                                <ul>
+                                    <li>Multiple spelling errors</li>
+                                    <li>Poor grammar</li>
+                                    <li>Awkward phrasing</li>
+                                    <li>Inconsistent formatting</li>
+                                </ul>
+                            </div>
+                            <div class="flag-item">
+                                <h4>Unprofessional Design</h4>
+                                <ul>
+                                    <li>Blurry logos or images</li>
+                                    <li>Misaligned text</li>
+                                    <li>Wrong colors or fonts</li>
+                                    <li>Missing company branding</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="protection-tips">
+                    <h3>🛡️ How to Protect Yourself</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <h4>1. Verify Independently</h4>
+                            <p>Don't click email links. Instead, go directly to the company's website by typing the URL yourself.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>2. Check with the Company</h4>
+                            <p>Call the company using a phone number from their official website, not from the suspicious email.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>3. Use Two-Factor Authentication</h4>
+                            <p>Enable 2FA on all important accounts to add an extra layer of security.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>4. Keep Software Updated</h4>
+                            <p>Update your browser, operating system, and security software regularly.</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>5. Report Phishing</h4>
+                            <p>Forward phishing emails to the Anti-Phishing Working Group at reportphishing@apwg.org</p>
+                        </div>
+                        <div class="tip-card">
+                            <h4>6. Use Spam Filters</h4>
+                            <p>Enable and maintain spam filters in your email client to catch many phishing attempts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="content-section">
+            <div class="container">
+                <h2>Test Your Knowledge</h2>
+                <p class="section-intro">Can you identify phishing attempts? Take this quiz to test your skills!</p>
+
+                <div id="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <p>Question <span id="current-question">1</span> of <span id="total-questions">5</span></p>
+                    </div>
+
+                    <div class="quiz-question" id="quiz-question">
+                        <!-- Questions will be loaded here by JavaScript -->
+                    </div>
+
+                    <div class="quiz-feedback" id="quiz-feedback" style="display: none;">
+                        <!-- Feedback will be shown here -->
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button class="btn-quiz" id="next-question" style="display: none;" onclick="nextQuestion()">Next Question</button>
+                        <button class="btn-quiz" id="restart-quiz" style="display: none;" onclick="restartQuiz()">Try Again</button>
+                    </div>
+
+                    <div class="quiz-results" id="quiz-results" style="display: none;">
+                        <h3>Quiz Complete!</h3>
+                        <p class="score">Your Score: <span id="final-score"></span>%</p>
+                        <div class="results-message" id="results-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Phishing Warning Modal -->
+    <div class="modal" id="phishing-modal">
+        <div class="modal-content">
+            <h3>⚠️ Phishing Link Detected!</h3>
+            <p>In a real phishing attack, clicking this link would have taken you to a malicious website designed to steal your information.</p>
+            <p><strong>Remember:</strong> Always verify links before clicking, especially in unsolicited emails.</p>
+            <button class="modal-close" onclick="closeModal()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2024 Phishing Awareness Training. For educational purposes only.</p>
+            <p>Report real phishing attempts to: <a href="mailto:reportphishing@apwg.org">reportphishing@apwg.org</a></p>
+        </div>
+    </footer>
+
+    <script src="phishing-simulator.js"></script>
+</body>
+</html>
