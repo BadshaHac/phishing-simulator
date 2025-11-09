@@ -1,6 +1,7 @@
 # Phishing Simulator
 
 This project is a **Phishing Simulator** designed to help you **learn how to identify phishing attacks** and understand how they work. The simulation mimics common phishing tactics such as fake emails, fake login pages, and suspicious links.
+https://phishing-simulator-beta.vercel.app/ CHECK OUT THIS TO VIEW THE WEBSITE WITH OUT DOWNLOADING THE RESOURCES
 
 ## Project Files
 
